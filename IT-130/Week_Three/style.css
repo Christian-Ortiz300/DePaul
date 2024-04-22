@@ -1,0 +1,11 @@
+body{ 
+    width: 550px;
+    border: 2px;
+    color: #000;
+}
+#btnValue{ 
+    text-align: center;
+}
+*{
+    color: black;
+}
