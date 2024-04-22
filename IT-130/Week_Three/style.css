@@ -1,11 +1,18 @@
 body{ 
     width: 550px;
-    border: 2px;
+    border: 5px solid;
+    padding: 10px;
     color: #000;
+} 
+h1{ 
+    color: #808080;
 }
-#btnValue{ 
-    text-align: center;
+#blurb{ 
+    font-size: 12px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+
 }
-*{
-    color: black;
+label{ 
+    color: #0000FF;
 }
