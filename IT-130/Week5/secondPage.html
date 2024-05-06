@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page #2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="heading">
+        <h1>Calculations!!</h1>
+        <img src="./images/calculator_PNG102244.png" alt="calculatorPicture" height="150" width="150">
+    </header>
+    <main>
+    <form id = "mathCalculation">
+           <p>
+            <label for="txtSquareNumber">Enter the number you would like to square: </label>
+            <input type="text" id="txtSquareNumber">
+            <input type="button" value="Get the square of the number" onclick="squareCalculation();">
+           </p>
+
+            <p>
+            <label for="txtCubicNumber">Enter the number you would like to cube: </label>
+            <input type="text" id = "txtCubicNumber">
+            <input type= "button" value = "Calculate the cube of the number" onclick="cubicCalculation();">
+            </p>
+
+        </form>
+
+     <div id = "squareResults">
+
+     </div>
+
+     <div id = "cubicResults">
+
+     </div>
+    </main>
+
+    <script>
+        // Function for num to be squared
+        function squareCalculation(){ 
+            var num, ans; 
+
+            num = document.getElementById("txtSquareNumber").value; 
+            ans = num * num; 
+
+            document.getElementById("squareResults").innerHTML = ans; 
+        }
+        // Function for num to be cubed. 
+        function cubicCalculation(){ 
+            var num, ans; 
+
+            num = document.getElementById("txtCubicNumber").value; 
+            ans = num * num * num; 
+
+            document.getElementById("cubicResults").innerHTML = ans; 
+
+        }
+
+        document.getElementById("squareResults").style.color="red";
+        document.getElementById("cubicResults").style.color="red";
+    </script>
+</body>
+</html>

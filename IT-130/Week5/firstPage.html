@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page #1</title>
+</head>
+<body>
+
+    <h1>From Memory Page </h1>
+    <form id = "converterForm">
+
+        <p><label for="txtValue">Enter the value in feet:</label> 
+        <input type="text" id="txtValue">
+        <input type="button" value="Convert to meters" onclick="convertToMeters();">
+       </p>
+
+    </form>
+    <div id = "results" style="background-color: #00008B; color: #f3ffff;">
+
+    </div>
+    <script>
+        function convertToMeters(){ 
+            var feet, meters; 
+        
+            feet = document.getElementById("txtValue").value;
+            meters = feet * 0.3048; 
+
+            document.getElementById("results").innerHTML = meters;
+
+        }
+    </script>
+</body>
+</html>
