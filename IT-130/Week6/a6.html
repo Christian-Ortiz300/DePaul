@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class = "headerClass ">
+       <h1>Interesting People: </h1>
+    </header>
+    <main>
+        <div class="celebrityInfo">
+            <p>
+                <label for="txtNameInfo">Name a Historical Figure You Respect: </label>
+                <input type="text" id="txtNameInfo">
+            </p>
+            <p>
+                <label for="txtCountryInfo">The Country That Historical Figure Was Born In: </label>
+                <input type="text" id="txtCountryInfo">
+            </p>
+            <p>
+                <label for="txtYearInfo">The Year That Person Was Born: </label>
+                <input type="text" id="txtYearInfo">
+            </p>
+            <button type="button" onclick="generatedSentence();">Configure!</button>
+        </div>
+        <div id="results" class = "output-format">
+
+        </div>
+
+
+    </main>
+   
+
+    <script>
+        function generatedSentence(){ 
+            var celebritiyName = document.getElementById("txtNameInfo").value; 
+            var celebritiyCountry = document.getElementById("txtCountryInfo").value; 
+            var celebritiyYear = document.getElementById("txtYearInfo").value; 
+
+            celebritiyYear = parseInt(celebritiyYear);
+            document.getElementById("results").innerHTML = "You respect " + celebritiyName + ". They were born in " + celebritiyCountry
+            + ". They are " + (2024-celebritiyYear) + " years old. In ten years from now, they will be " + ((2024 - celebritiyYear) + 10 ) + " years old."; 
+        
+        }
+
+        /*
+        Part B: 
+        Only code that has been explicitly covered in this course may be used in our assignments. If the grader spots any code that has not
+        been covered, they will contact me, and in nearly all cases, an Academic Integrity violation will be filed. 
+        */
+    </script>
+</body>
+</html>
