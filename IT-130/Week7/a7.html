@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Age Comparison</h1>
+        <h2>Who is Older?</h2>
+    </header>
+    <main>
+        <p>
+            <label for="txtPersonOneInfo">Person One</label>
+            <input type="text" id = "txtPersonOneInfo">
+        </p>
+        <p> 
+            <label for="txtPersonTwoInfo">Person Two</label>
+            <input type="text" id = "txtPersonTwoInfo">
+        </p>
+        <button type = "button" onclick="calculateAge();">Compare Ages!</button>
+        <div id = "results" class = "output"> </div>
+        
+    </main>
+    <script>
+        function calculateAge(){ 
+            var personOne = document.getElementById('txtPersonOneInfo').value;
+            var personTwo = document.getElementById('txtPersonTwoInfo').value;
+            var result, ageDiff; 
+
+            personOne = parseInt(personOne); 
+            personTwo = parseInt(personTwo); 
+
+            if(personOne > personTwo){ 
+                ageDiff = personOne - personTwo; 
+                result = "Person 1 is older by " + ageDiff + " years."; 
+            }else{
+                ageDiff = personTwo - personOne; 
+                result = "Person 2 is older by " + ageDiff + " years."; 
+            }
+            document.getElementById("results").innerHTML = result;
+
+        }
+        /*
+        * Only code that has been explicitly covered in this course may be used in our assignments. 
+        */
+    </script>
+
+    <!--
+        Margin - Margins are used to create space around elements, outside of any defined borders.
+        Padding - Padding is used to create space around an element's content, inside of any defined borders.
+        within the "box model", Margins are always on the outside border of the box meanwhile padding is within
+         the inside of the margin but just outside the content box. 
+    -->
+</body>
+</html>

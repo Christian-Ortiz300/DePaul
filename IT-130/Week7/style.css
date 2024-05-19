@@ -1,0 +1,15 @@
+body{ 
+    width: 450px;
+    border: 8px #FFC0CB dashed;
+    padding: 20px;
+    margin: 25px; 
+}
+header{ 
+    background-color: #00008B;
+    color: #ffffff;
+}
+.output{ 
+    background-color:#87ceeb;
+    color: #FF0000;
+    font-weight: bold;
+}
