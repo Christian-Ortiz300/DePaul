@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 8</title>
+</head>
+<body>
+    <header>
+        <h1>Fun and Games with Date()</h1>
+    </header>
+    <main>
+        <p>
+            <button type = "button" onclick="checkMay2024();">Is it May of 2024?</button>
+        </p>
+        <p>
+            <button type = "button" onclick="checkWeekend();">Is it the Weekend?</button>
+        </p>
+        <p>
+            <button type = "button" onclick= "checkNightTime();">Is it Nighttime?</button>
+        </p>
+
+        <div id = "results" class="format-output">
+
+        </div>
+        
+    </main>
+
+    <script>
+        function checkMay2024(){ 
+            var currentDate = new Date();
+            var currentMonth = currentDate.getUTCMonth();
+            var currentYear = currentDate.getFullYear(); 
+            if(currentMonth ==  4 && currentYear == 2024){ 
+                document.getElementById("results").innerHTML = "It is May 2024!"; 
+            }else{ 
+                document.getElementById("results").innerHTML = "It is not May 2024!"; 
+            }
+        }
+
+        function checkWeekend(){ 
+            var currentDate = new Date(); 
+            var dayOfWeek = currentDate.getDay(); 
+
+            if(dayOfWeek == 0 || dayOfWeek == 6){ 
+                document.getElementById("results").innerHTML = "It is the weekend!"; 
+            }else{ 
+                document.getElementById("results").innerHTML = "It is not the weekend!"; 
+            }
+        }
+        function checkNightTime(){ 
+            var currentDate = new Date(); 
+            var hours = currentDate.getHours(); 
+
+            if(hours >= 18 || hours < 5){
+                document.getElementById("results").innerHTML = "It is nighttime!"; 
+            }else{ 
+                document.getElementById("results").innerHTML = "It is not nighttime!"; 
+            }
+        }
+
+    </script>
+
+</body>
+</html>
