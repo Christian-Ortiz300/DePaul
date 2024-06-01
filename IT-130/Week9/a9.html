@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 9</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -18,19 +19,56 @@
             <p>
                 <label for="selSize">Sweatshirt Size:</label>
                 <select id="selSize">
-                    <option value="sml">Small</option>
-                    <option value="med">Medium</option>
-                    <option value="lg">Large</option>
+                    <option value="sml">SMALL</option>
+                    <option value="med">MEDIUM</option>
+                    <option value="lg">LARGE</option>
                 </select>
             </p>
             <p>
                 <label for="shipping">Shipping Type:</label>
-                <input type="radio" id= "">
+                <p>
+                    US Postal Service ($5)
+                    <input type="radio" name = "shippingType" id= "USPS" value = "5" checked = "checked"> <br>
+            
+                    FedEx ($15)
+                    <input type="radio" name = "shippingType" id = "FedEx" value = "15" checked = "checked"> <br> 
+        
+                    UPS Overnight ($25)
+                    <input type="radio" name = "shippingType" id = "UPS" value = "25" checked = "checked">
+                </p>
+            </p>
+            <p>
+                <label for="chkMonogram"> Monogrammed? ($20)</label>
+                <input type="checkbox" id="chkMonogram" value = "20">
+            </p>
+            <p>
+                <button type = "button" id = "btnOrder" value = "Order" onclick="calculationOrder();"> Order My Sweater!</button>
             </p>
         </form>
     </main>
+    <div id = "results" class = "format-output"></div>
     <script>
-        
+        function calculationOrder(){ 
+
+            var cost = 49.99 
+            var name = document.getElementById("txtName").value; 
+            //adds shipping types
+            if(document.getElementById("USPS").checked){ 
+                cost = cost + 5; 
+            }else if(document.getElementById("FedEx").checked){ 
+                cost = cost + 15; 
+            }else if(document.getElementById("UPS").checked){ 
+                cost = cost + 20; 
+            }
+            //Adds for monogram 
+            if(document.getElementById("chkMonogram").checked){ 
+                cost = cost + 20; 
+            }
+            cost = cost.toFixed(2);
+
+            var result = "Thank you, " + name + ", for your order! Your cost is: $" + cost + "."; 
+            document.getElementById("results").innerHTML = result; 
+        }
     </script>
 </body>
 </html>
