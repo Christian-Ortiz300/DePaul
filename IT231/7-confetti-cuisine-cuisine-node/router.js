@@ -1,12 +1,12 @@
-'use strict'; 
+"use strict"
 
 const httpStatus = require('http-status-codes'),
-    contentTypes = require('./content-types'),
+    contentTypes = require('./contentTypes'),
     utils = require('./utils');
 
 const routes = {
     GET: {},
-    POST: {}, 
+    POST: {},
 };
 
 exports.handle = (req, res) => {
@@ -19,9 +19,9 @@ exports.handle = (req, res) => {
 }
 
 exports.get = (url, action) => {
-    routes['GET'][url] = action;
-}; 
+    routes["GET"][url] = action;
+};
 
-exports.get = (url, action) => {
-    routes['POST'][url] = action;
-}; 
+exports.post = (url, action) => {
+    routes["POST"][url] = action;
+};
