@@ -1,4 +1,4 @@
-"use strict"
+"use strict"; 
 
 const httpStatus = require('http-status-codes'),
     contentTypes = require('./contentTypes'),

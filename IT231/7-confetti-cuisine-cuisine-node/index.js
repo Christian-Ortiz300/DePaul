@@ -1,4 +1,4 @@
-"use strict" 
+"use strict"; 
 
 const port = 3000,
     http = require('http'),
@@ -6,7 +6,6 @@ const port = 3000,
     router = require('./router'),
     contentTypes = require('./contentTypes'),
     utils = require('./utils');
-
 
 router.get('/', (req, res) => {
     res.writeHead(httpStatus.OK, contentTypes.html);
