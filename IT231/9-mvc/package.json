@@ -1,0 +1,14 @@
+{
+    "name": "9-mvc",
+    "version": "1.0.0",
+    "description": "MVC express setup",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Christian Ortiz",
+    "license": "ISC", 
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
