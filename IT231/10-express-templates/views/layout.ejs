@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Template Engine</title>
+    <style media="screen">
+        body{ 
+            margin: 0; 
+            padding: 0; 
+            height: 100%;
+            color: black; 
+            text-align: center;
+            font-family: sans-serif;
+        }
+        #nav{
+            background-color: #9c73a9;
+        }
+        #footer{ 
+            background-color: #7d498d;
+            position: relative; 
+            bottom: 0; 
+        }
+        #container{ 
+            height: 100px; 
+            padding-top: 40px; 
+        }
+        .block{ 
+            padding-top: 40px; 
+            width: 100%;
+            text-align: center; 
+            height: 60px;
+            border: black dashed 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav" class="block">TOP NAVIGATION</div>
+    <div class="container"><%- body %></div>
+    <div id="footer" class="block">FOOTER</div>
+
+</body>
+</html>
