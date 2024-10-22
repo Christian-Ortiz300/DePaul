@@ -1,0 +1,29 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-
+    scale=1.0"
+  />
+  <title>Confetti Cuisine | Courses</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="/css/confetti_cuisine.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="col-6 mx-auto">
+      <img src="images/fruit.jpg" />
+    </div>
+    <div class="col-12">
+      <h1 id="title" class="my-4 text-center">
+        Learn to cook cutting edge food
+      </h1>
+      <h3 class="mb-3">Our Courses</h3>
+      <% offeredCourses.forEach(course=> { %>
+      <h5><%= course.title %></h5>
+      <p><%= course.cost %></p>
+      <% }); %>
+    </div>
+  </div>
+</body>
