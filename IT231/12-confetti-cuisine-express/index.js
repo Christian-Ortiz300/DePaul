@@ -20,6 +20,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) =>{ 
     res.render('index'); 
 }); 
+
 app.get('/courses', homeController.showCourses); 
 app.get('/contact', homeController.showSignUp); 
 app.post('/contact', homeController.postedSignUpForm);

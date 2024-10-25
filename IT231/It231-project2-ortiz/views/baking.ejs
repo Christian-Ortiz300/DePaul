@@ -1,0 +1,28 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baking Page</title>
+  <link rel="stylesheet" href="/confetti_cuisine.css" />
+</head>
+<body>
+  <div class="baking-header">
+    <h1>Baking Course</h1>
+    <p>We will intorudce different types of breads from various countries</p>
+  </div>
+  <div class="baking-container">
+    <%offeredBaking.forEach(baking => { %>
+    <div class="baking-subcontainer">
+      <div class="bakingTitle"><%= baking.name %></div>
+      <div class="leftside">
+        <div class="baking-image"><img src="<%= baking.img %>" alt="" /></div>
+        <cite><%= baking.cite %></cite>
+      </div>
+      <div class="baking-text">
+        <div class="rightside">
+          <p><%= baking.description %></p>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</body>

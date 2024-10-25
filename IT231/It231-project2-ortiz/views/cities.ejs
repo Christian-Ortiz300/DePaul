@@ -1,0 +1,29 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cities Page</title>
+  <link rel="stylesheet" href="/confetti_cuisine.css" />
+</head>
+<body>
+  <div class="city-container">
+    <div class="city-card">
+      <h1>Top 5 Cities</h1>
+      <p>Top Cities ranked food In the USA:</p>
+    </div>
+    <div class="city-container">
+      <%offeredCities.forEach(city => { %>
+      <div class="city-card">
+        <%city.name %>
+        <h2 class="city-title"><%= city.title %></h2>
+        <div class="city-image"><img src="<%= city.img %>" alt="" /></div>
+        <div class="city-citation">
+          <cite><%= city.cite %></cite>
+        </div>
+        <div class="city-text">
+          <p><%= city.description %></p>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</body>

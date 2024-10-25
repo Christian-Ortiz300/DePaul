@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaina");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  padding: 0% 10%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.mt-3 {
+  margin-top: 1rem !important;
+}
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.text-center {
+  text-align: center !important;
+}
+body {
+  margin: 0;
+  padding-top: 150px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #625a56;
+}
+#nav {
+  width: 100%;
+  height: 135px;
+  padding: 20px 0 5px 0;
+  border-bottom: 8px solid #ee3114;
+  box-shadow: 10px 10px 10px #ccc;
+  position: absolute;
+  top: 0;
+}
+#title {
+  color: #625a56;
+  margin: 0;
+  font-family: "Baloo Bhaina";
+  text-transform: uppercase;
+}
+img {
+  width: 100%;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+#nav a {
+  text-decoration: none;
+}
+.nav-align {
+  text-align: center;
+  padding: 3px 0;
+}
+.button {
+  background-color: #ed4a0f;
+  padding: 3px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  color: #fff;
+}
+.button:hover {
+  background-color: #ffb99f;
+  color: #ed4a0f;
+}
+input {
+  margin-top: 10px;
+}
+.uniform-image {
+  width: 100px; /* Set desired width */
+  height: 100px; /* Set desired height */
+  object-fit: cover; /* Ensures the image covers the given dimensions */
+}
+
+/*Recipe CSS */
+.recipe-header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: Bolder;
+  color: #ed4a0f;
+}
+.recipe-header p {
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-weight: bolder;
+}
+.recipe-container {
+  background-color: darkgrey;
+  border: 2px solid #ed4a0f;
+  margin: 20px 0; 
+  padding: 15px; 
+}
+.recipe-container h2{ 
+  color: #ed4a0f;
+}
+.recipe-container cite{ 
+  color: #ed4a0f;
+}
+.recipe-container h3{ 
+  color: #ed4a0f; 
+}
+.recipe-container li{
+  color: white;
+}
+
+/*Cities CSS */
+.city-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 90%;
+}
+.city-card h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #ed4a0f;
+}
+.city-card p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: black;
+  font-weight: bolder;
+}
+.city-title {
+  color: #ed4a0f;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.city-citation {
+  color: #ed4a0f;
+}
+
+/*Baking CSS */
+.baking-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.baking-header p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 3px;
+}
+.baking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.baking-subcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 20px 0;
+  background-color: grey;
+  border: 2px solid #ed4a0f;
+  color: white;
+}
+.baking-subcontainer .bakingTitle {
+  flex: 1;
+  align-items: flex-start;
+  margin: 0 20px;
+}
+.baking-image {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.leftside {
+  flex: 1;
+  max-width: 300px;
+  margin-right: 20px;
+}
+.rightside {
+  flex: 2;
+}
+.baking-text p {
+  font-size: 1rem;
+}
